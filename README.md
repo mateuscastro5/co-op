@@ -22,7 +22,7 @@
 
 - **Backend**: Node.js, Express, TypeScript MySQL
 - **Frontend**: React, JavaScript, Tailwind CSS
-- **Testes**: Jest
+- **Testes**: Jest, SuperTest
 - **Autenticação**: JWT, OAuth
 
 ## Roadmap 🗺️
