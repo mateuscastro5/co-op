@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { gameService } from '../services/gameService'; // Ensure this path is correct and the file exists
+import { gameService } from '../services/gameService'; 
 
 export class gameController {
     private gameService: gameService;

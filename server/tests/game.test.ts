@@ -3,6 +3,7 @@ import app from '../src/index';
 
 describe('Testing games API', () => {
   it('should create a new game', async () => {
+    
     const newGame = {
       title: 'The Legend of Zelda: Breath of the Wild',
       developer: 'Mateus',
