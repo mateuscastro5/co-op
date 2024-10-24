@@ -20,9 +20,9 @@
 
 ## Tecnologias Utilizadas 🛠️
 
-- **Backend**: Node.js, Express, MySQL
-- **Frontend**: React, TypeScript, SASS
-- **Testes**: Jest, Supertest
+- **Backend**: Node.js, Express, TypeScript MySQL
+- **Frontend**: React, JavaScript, Tailwind CSS
+- **Testes**: Jest
 - **Autenticação**: JWT, OAuth
 
 ## Roadmap 🗺️
