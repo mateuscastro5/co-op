@@ -5,6 +5,7 @@ import { userService } from '../services/userService';
 const userControllerInstance = new userController(new userService());
 const router = Router();
 
-router.post('/', userControllerInstance.createUser);
+router.post('/register', userControllerInstance.createUser);
+router.post('/login', userControllerInstance.loginUser);
 
 export default router;

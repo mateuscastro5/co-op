@@ -1,20 +1,32 @@
 import request from 'supertest';
 import app from '../src/index';
-import exp from 'constants';
+import { it, expect, describe, beforeAll } from '@jest/globals';
 
-describe ('Testing user login', () => {
-    it('should login a user', async () => {
+describe('Testing user login', () => {
+
+    beforeAll(async () => {
         const user = {
-            name: 'mateus',
             email: 'mateus@gmail.com',
             password: 'pass123',
-            id: '1'
+            name: 'mateus'
+        };
+        const response = await request(app).post('/users/register').send(user);
+        if (response.status !== 201) {
+            throw new Error('User registration failed');
         }
+    });
+
+    it('should login a user', async () => {
+        const user = {
+            email: 'mateus@gmail.com',
+            password: 'pass123'
+        };
 
         const response = await request(app).post('/users/login').send(user);
 
-        expect.response.status.toBe(200);
-        expect(response.body.name).toBe(user.name);
+        expect(response.status).toBe(200);
+        expect(response.body.name).toBe('mateus');
         
-    })
-})
+    }, 10000); 
+});
+   

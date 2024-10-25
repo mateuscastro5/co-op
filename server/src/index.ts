@@ -5,7 +5,9 @@ import userRoutes from './routes/userRoutes';
 const app = express();
 
 app.use(express.json());
+
 app.use('/games', gameRoutes);
+app.use('/users', userRoutes);
 app.use('/users', userRoutes);
 
 export default app;

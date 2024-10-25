@@ -11,7 +11,7 @@ describe('Testing users API', () => {
       id: '1'
     };
 
-    const response = await request(app).post('/users').send(newUser);
+    const response = await request(app).post('/users/register').send(newUser);
 
     expect (response.status).toBe(201);
     expect (response.body.name).toBe(newUser.name);
