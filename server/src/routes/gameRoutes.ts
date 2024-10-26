@@ -9,5 +9,6 @@ const gameControllerInstance = new gameController(gameServiceInstance);
 const router = Router();
 
 router.post('/', gameControllerInstance.createGame);
+router.post('/games', gameControllerInstance.createGame);
 
 export default router;

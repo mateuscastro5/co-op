@@ -1,5 +1,6 @@
 import request from 'supertest';
 import app from '../src/index';
+import { expect, describe, it } from '@jest/globals';
 
 describe('Testing users API', () => {
   it('should create a new user', async () => {
