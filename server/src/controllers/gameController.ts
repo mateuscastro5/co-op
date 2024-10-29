@@ -1,14 +1,19 @@
 import { Request, Response } from 'express';
-import { gameService } from '../services/gameService'; 
+import {GameService} from "../services/gameService";
 
-export class gameController {
-    private gameService: gameService;
+export class GameController {
+    private gameService: GameService;
 
-    constructor(gameService: gameService) {
+    constructor(gameService: GameService) {
         this.gameService = gameService;
     }
 
     public createGame = async (req: Request, res: Response) => {
-        const newGame = await this.gameService.createGame(req.body);
-        res.status(201).json(newGame);
-}};
+        try {
+            const newGame = await this.gameService.createGame(req.body);
+            res.status(201).json(newGame);
+        } catch (error) {
+            res.status(500).json({ message: "Erro ao criar o jogo", error });
+        }
+    }
+}

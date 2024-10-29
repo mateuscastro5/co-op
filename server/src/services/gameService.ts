@@ -1,6 +1,6 @@
 import { Game } from '../models/gameModel';
 
-export class gameService {
+export class GameService {
     private games: Game[] = [];
 
 

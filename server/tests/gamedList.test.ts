@@ -18,12 +18,13 @@ describe('List games', () => {
             throw new Error('Game registration failed');
         }
     });
+
     it('should list all games contained in the database', async () => {
         const response = await request(app).get('/games');
         expect(response.status).toBe(200);
         expect(response.body).toEqual(
             expect.arrayContaining([
-                expect.objectContaining({newGame})          
+                expect.objectContaining(newGame)
             ]))
     })
 });

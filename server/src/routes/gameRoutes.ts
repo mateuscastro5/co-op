@@ -1,14 +1,13 @@
 import { Router } from 'express';
-import { gameController } from '../controllers/gameController';
-import { gameService } from '../services/gameService';
+import { GameController } from '../controllers/gameController';
+import { GameService } from '../services/gameService';
 
-const gameServiceInstance = new gameService();
-const gameControllerInstance = new gameController(gameServiceInstance);
+const gameServiceInstance = new GameService();
+const gameControllerInstance = new GameController(gameServiceInstance);
 
 
 const router = Router();
 
-router.post('/', gameControllerInstance.createGame);
 router.post('/games', gameControllerInstance.createGame);
 
 export default router;
