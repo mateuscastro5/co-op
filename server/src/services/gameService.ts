@@ -10,4 +10,8 @@ export class GameService {
         this.games.push(newGame);
         return newGame;
     }
+
+    public async listGames(): Promise<Game[]> {
+        return this.games;
+    }
 }
