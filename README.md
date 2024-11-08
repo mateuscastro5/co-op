@@ -44,4 +44,4 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 
 **Co-op**: Unindo Desenvolvedores Indie para Criar Jogos Incríveis!
 
-https://www.figma.com/proto/zm42zduqGGRQeiCxxKWCzy/coop?node-id=0-1&t=U5cMXrfvPbhsjGpM-1
+https://www.figma.com/design/PlFzjPwCzQ5yp64rrAkpj6/CO-OP-PROJECT?node-id=0-1&node-type=canvas&t=Dwpy9LC4o5XDaiK6-0
