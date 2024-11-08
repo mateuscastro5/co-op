@@ -1,0 +1,17 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    padding-inline: 96px;
+}
+main {
+    color: white;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+   
+}
+.content-container h1 {
+    font-size: 64px;
+    letter-spacing: 6px;
+}
