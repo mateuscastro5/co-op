@@ -3,9 +3,19 @@ button {
     align-items: center;
     background-color: white;
     padding: 6px 36px;
-    border-radius: 15px;
+    border-radius: 1px;
     gap: 16px;
-    font-weight: 300;
-    font-size: 30px;
+    font-weight: 600;
+    font-size: 22px;
     border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.botao:hover {
+   background-color: purple;
+}
+.icon {
+    background-color: transparent;
 }

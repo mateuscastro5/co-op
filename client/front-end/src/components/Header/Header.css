@@ -15,6 +15,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 }
 ul {
     display: flex;
@@ -25,5 +26,5 @@ ul {
 }
 li {
     color: white;
-    font-size: 42px;
+    font-size: 30px;
 }

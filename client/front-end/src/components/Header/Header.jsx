@@ -9,8 +9,8 @@ export function Header() {
                 <nav>
                     <Button />
                     <ul>
-                        <li>Log In</li>
-                        <li>Sign In</li>
+                        <li>Entrar</li>
+                        <li>Cadastrar</li>
                     </ul>
                 </nav>
             </div>
