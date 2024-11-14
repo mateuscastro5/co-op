@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     padding-inline: 52px;
+    background-color: rgba(33, 44, 66, 1);
+    margin: 0;
 }
 .header-container h1{
     margin: 0;
@@ -25,6 +27,30 @@ ul {
     gap: 30px;
 }
 li {
+    display: flex;
     color: white;
     font-size: 30px;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .main-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .header-container h1 {
+        font-size: 50px;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 100px;
+        margin-right: 100px;
+        align-items: center;
+    }
+    ul {
+     font-size: 30px;
+    }
+    li {
+        font-size: 20px;
+    }
 }

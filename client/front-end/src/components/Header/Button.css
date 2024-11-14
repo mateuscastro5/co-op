@@ -1,21 +1,21 @@
 button {
     display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 6px 36px;
-    border-radius: 1px;
-    gap: 16px;
-    font-weight: 600;
-    font-size: 22px;
+    padding: 12px 24px;
+    font-size: 20px;
+    background-color: #e64eeb;
+    color: white;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 500px;
+    transition: background-color 0.3s;
+    align-items: center;
+    gap: 8px;
 }
-
 
 .botao:hover {
    background-color: purple;
 }
 .icon {
     background-color: transparent;
+    width: 25px;
 }

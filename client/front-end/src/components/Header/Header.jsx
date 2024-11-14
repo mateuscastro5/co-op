@@ -7,10 +7,10 @@ export function Header() {
             <div className="header-container">
                 <h1>co-op</h1>
                 <nav>
-                    <Button />
+                    <Button name="Buscar"/>
                     <ul>
                         <li>Entrar</li>
-                        <li>Cadastrar</li>
+                        <li><Button name="Cadastrar" showIcon={false}/></li>
                     </ul>
                 </nav>
             </div>
