@@ -4,8 +4,8 @@ import { Icon_buscar_1 } from "./Icon_buscar_1";
 export function Cabecalho_1() {
     return(
         <>
-            <header className="bg-[#212b41] flex justify-between items-center pr-14 pl-14 pt-7 pb-7 md:pr-24 md:pl-28 md:pt-10 md:pb-10">
-                <h1 className="text-white text-5xl md:text-7xl font-normal font-Jersey20">CO-OP</h1>
+            <header className="bg-[#212b41] flex justify-between items-center pr-14 pl-14 pt-7 pb-7 md:pr-28 md:pl-28 md:pt-10 md:pb-10">
+                <h1 className="text-white text-5xl md:text-7xl font-semibold font-Jersey20">CO-OP</h1>
                 <div className="flex justify-around items-center gap-10">
                     {/* <Link to="" className=""> */}
                         <Icon_buscar_1 />
