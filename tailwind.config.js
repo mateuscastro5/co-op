@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Jersey20: ['Jersey 20', 'sans-serif'], // Define o nome da fonte
+        Jost: ['Jost', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
