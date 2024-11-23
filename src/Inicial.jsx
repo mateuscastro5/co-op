@@ -7,7 +7,7 @@ function Inicial() {
   return (
     <>
       <Cabecalho_1 />
-        <section className="bg-[#212b41] flex flex-col-reverse md:flex-row md:justify-between items-center gap-14 pr-14 pl-14 pt-7 pb-28 md:pr-28 md:pl-28 md:pt-10 md:pb-20">
+        <section className="bg-[#212b41] flex flex-col-reverse md:flex-row md:justify-around items-center gap-14 pr-14 pl-14 pt-7 pb-28 md:pr-28 md:pl-28 md:pt-10 md:pb-20">
           <div className="md:w-[650px] flex flex-col items-start gap-4">
             <h2 className=" text-white text-[44px] md:text-[60px] font-semibold font-Jost">COOPERE, CONHEÇA E COLABORE COM PESSOAS EM SEUS PROJETOS INDIE.</h2>
             <p className=" text-white/60 text-[22px] md:text-[24px] font-normal font-Jost">Buscamos impulsionar e criar um ecossistema  rico para desenvolvedores e idealizadores. Venha bater papo, curtir e colaborar!</p>
@@ -19,7 +19,7 @@ function Inicial() {
             <img src="./image1.png" alt="" className="w-[551px] h-[488px] md:w-[547px] md:h-[530px]" />
           </div>
         </section>
-        <section className="flex flex-col md:flex-row md:justify-between items-center gap-14 pr-14 pl-14 pt-20 pb-28 md:pr-24 md:pl-28 md:pt-10 md:pb-20">
+        <section className="flex flex-col md:flex-row md:justify-around items-center gap-14 pr-14 pl-14 pt-20 pb-28 md:pr-24 md:pl-28 md:pt-10 md:pb-20">
           <div className="hidden md:block">
             <img src="./image2.png" alt="" className="" />
           </div>

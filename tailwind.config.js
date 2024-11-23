@@ -10,6 +10,9 @@ export default {
         Jersey20: ['Jersey 20', 'sans-serif'], // Define o nome da fonte
         Jost: ['Jost', 'sans-serif'],
       },
+      colors: {
+        fundo: '#212b41',
+      },
     },
   },
   plugins: [],
