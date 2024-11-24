@@ -8,6 +8,7 @@ import './index.css'
 import Inicial from './Inicial.jsx'
 import Entrar from "./Entrar.jsx";
 import Cadastrar from "./Cadastrar.jsx";
+import Feed from "./Feed.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "cadastrar",
     element: <Cadastrar />,
+  },
+  {
+    path: "feed",
+    element: <Feed />,
   },
 ]);
 
