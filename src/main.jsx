@@ -9,6 +9,8 @@ import Inicial from './Inicial.jsx'
 import Entrar from "./Entrar.jsx";
 import Cadastrar from "./Cadastrar.jsx";
 import Feed from "./Feed.jsx";
+import Publicar from "./Publicar.jsx";
+import Pesquisa from "./Pesquisa.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
   {
     path: "feed",
     element: <Feed />,
+  },
+  {
+    path: "publicar",
+    element: <Publicar />,
+  },
+  {
+    path: "pesquisa",
+    element: <Pesquisa />,
   },
 ]);
 

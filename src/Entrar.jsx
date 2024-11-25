@@ -31,7 +31,8 @@ function Entrar () {
                         </div>
                         <div className="flex flex-col items-center pt-20 gap-5">
                             <button type='submit' className='w-[257px] md:w-[390px] h-[41px] bg-[#e64eeb] rounded-[25px] '>
-                                <input type="submit" value="Entrar" className='text-white text-xl font-light font-Jost' />
+                                <Link to="/feed"><p className="text-white text-xl font-light font-Jost">Entrar</p></Link>
+                                {/* <input type="submit" value="Entrar" className='text-white text-xl font-light font-Jost' /> */}
                             </button>
                             <div className="flex justify-around items-center gap-2">
                                 <p className="text-[#212c42] text-lg font-extralight font-Jost">Novo membro?</p>
