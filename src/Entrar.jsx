@@ -12,6 +12,7 @@ function Entrar() {
         const response = await fetch(`http://localhost:3001/usuarios?email=${email}&senha=${senha}`);
         const data = await response.json();
         if (data.length > 0) {
+            localStorage.setItem('usuarioLogado', JSON.stringify(data[0]));
             navigate('/feed');
         } else {
             alert('Credenciais inválidas');

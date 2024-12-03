@@ -7,8 +7,10 @@ import { Post_2 } from "./Componentes/Post_2";
 
 function Pesquisa() {
     const [jogos, setJogos] = useState([]);
+    const [usuarios, setUsuarios] = useState([]);
     const [busca, setBusca] = useState('');
-    const [resultados, setResultados] = useState([]);
+    const [resultadosJogos, setResultadosJogos] = useState([]);
+    const [resultadosUsuarios, setResultadosUsuarios] = useState([]);
 
     useEffect(() => {
         const fetchJogos = async () => {
@@ -17,14 +19,26 @@ function Pesquisa() {
             setJogos(data);
         };
         fetchJogos();
+
+        const fetchUsuarios = async () => {
+            const response = await fetch('http://localhost:3001/usuarios');
+            const data = await response.json();
+            setUsuarios(data);
+        };
+        fetchUsuarios();
     }, []);
 
     const handleSearch = (e) => {
         e.preventDefault();
-        const resultadosBusca = jogos.filter(jogo => 
+        const resultadosBuscaJogos = jogos.filter(jogo => 
             jogo.nome.toLowerCase().includes(busca.toLowerCase())
         );
-        setResultados(resultadosBusca);
+        setResultadosJogos(resultadosBuscaJogos);
+
+        const resultadosBuscaUsuarios = usuarios.filter(usuario => 
+            usuario.nome.toLowerCase().includes(busca.toLowerCase())
+        );
+        setResultadosUsuarios(resultadosBuscaUsuarios);
     };
 
     return (
@@ -46,10 +60,20 @@ function Pesquisa() {
                         </form>
                     </div>
                     <div className="md:grid md:grid-cols-2 gap-8">
-                        {resultados.map((jogo) => (
+                        {resultadosJogos.map((jogo) => (
                             <div key={jogo.id} className="w-[580px] h-auto md:w-[580px] md:h-auto pb-6 bg-[#3b475f] rounded-[15px] shadow-md">
                                 <div className="">
                                     <Post_2 jogo={jogo} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="md:grid md:grid-cols-2 gap-8">
+                        {resultadosUsuarios.map((usuario) => (
+                            <div key={usuario.id} className="w-[580px] h-auto md:w-[580px] md:h-auto pb-6 bg-[#3b475f] rounded-[15px] shadow-md">
+                                <div className="p-4">
+                                    <h3 className="text-white text-2xl font-medium font-Jost">{usuario.nome}</h3>
+                                    <p className="text-white text-base md:text-xl font-light font-Jost">{usuario.email}</p>
                                 </div>
                             </div>
                         ))}

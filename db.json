@@ -7,7 +7,9 @@
       "imagem": "https://media.s-bol.com/pkGNp3n20BMp/3Q2Km89/550x766.jpg",
       "interacoes": [
         {
-          "texto": "Super legal!"
+          "texto": "",
+          "emoji": "❤️",
+          "usuario": "edecio"
         }
       ]
     }
@@ -19,6 +21,13 @@
       "email": "mateus.castro2011@gmail.com",
       "telefone": "539999999",
       "senha": "mateus123"
+    },
+    {
+      "id": "2ff8",
+      "nome": "edecio",
+      "email": "edecio@gmail.com",
+      "telefone": "539999999",
+      "senha": "edecio123"
     }
   ]
 }
