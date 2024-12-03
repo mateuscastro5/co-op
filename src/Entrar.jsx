@@ -1,7 +1,23 @@
-import { Link } from 'react-router-dom'
-import { Footer } from './Componentes/Footer'
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Footer } from './Componentes/Footer';
 
-function Entrar () {
+function Entrar() {
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const response = await fetch(`http://localhost:3001/usuarios?email=${email}&senha=${senha}`);
+        const data = await response.json();
+        if (data.length > 0) {
+            navigate('/feed');
+        } else {
+            alert('Credenciais inválidas');
+        }
+    };
+
     return (
         <>
             <header className="flex flex-col items-center bg-fundo gap-10 pt-24 pb-24 pr-24 pl-24">
@@ -15,10 +31,10 @@ function Entrar () {
                     <div className="flex items-center justify-center">
                         <p className="text-fundo text-[28px] font-normal font-Jost">Entrar</p>
                     </div>
-                    <form className="flex flex-col pl-10 pr-10 pt-12 pb-12">
+                    <form className="flex flex-col pl-10 pr-10 pt-12 pb-12" onSubmit={handleSubmit}>
                         <p className="flex flex-col items-start">
                             <label className='text-fundo text-xl font-light font-Jost'>Nome de Usuário ou Email</label>
-                            <input type="text" placeholder='Digite aqui...' required className='pl-4 text-[#212c42]/80 text-base font-light font-Jost w-[395.48px] md:w-[556px]  h-[55.32px] bg-[#e64eeb]/20 rounded-md border border-[#e64eeb]'/>
+                            <input type="text" placeholder='Digite aqui...' required className='pl-4 text-[#212c42]/80 text-base font-light font-Jost w-[395.48px] md:w-[556px]  h-[55.32px] bg-[#e64eeb]/20 rounded-md border border-[#e64eeb]' value={email} onChange={(e) => setEmail(e.target.value)} />
                         </p>
                         <div className="flex flex-col pt-10">
                             <div className="flex justify-between items-center">
@@ -27,12 +43,11 @@ function Entrar () {
                                 </p>
                                 <p className="text-[#212c42] text-[16px] font-light font-Jost">Esqueceu a senha?</p>
                             </div>
-                            <input type="password" id="" placeholder='Digite aqui...' required className='pl-4 text-[#212c42]/80 text-base font-light font-Jost w-[395.48px] md:w-[556px] h-[55.32px] bg-[#e64eeb]/20 rounded-md border border-[#e64eeb]'/>
+                            <input type="password" id="" placeholder='Digite aqui...' required className='pl-4 text-[#212c42]/80 text-base font-light font-Jost w-[395.48px] md:w-[556px] h-[55.32px] bg-[#e64eeb]/20 rounded-md border border-[#e64eeb]' value={senha} onChange={(e) => setSenha(e.target.value)} />
                         </div>
                         <div className="flex flex-col items-center pt-20 gap-5">
                             <button type='submit' className='w-[257px] md:w-[390px] h-[41px] bg-[#e64eeb] rounded-[25px] '>
-                                <Link to="/feed"><p className="text-white text-xl font-light font-Jost">Entrar</p></Link>
-                                {/* <input type="submit" value="Entrar" className='text-white text-xl font-light font-Jost' /> */}
+                                <p className="text-white text-xl font-light font-Jost">Entrar</p>
                             </button>
                             <div className="flex justify-around items-center gap-2">
                                 <p className="text-[#212c42] text-lg font-extralight font-Jost">Novo membro?</p>
@@ -46,7 +61,7 @@ function Entrar () {
             </main>
             <Footer />
         </>
-    )
+    );
 }
 
-export default Entrar
+export default Entrar;

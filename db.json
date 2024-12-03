@@ -12,6 +12,13 @@
       ]
     }
   ],
-  
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "7b7f",
+      "nome": "mateus",
+      "email": "mateus.castro2011@gmail.com",
+      "telefone": "539999999",
+      "senha": "mateus123"
+    }
+  ]
 }
