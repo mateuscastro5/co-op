@@ -10,7 +10,8 @@ function Publicar() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const novoJogo = { nome, descricao, imagem };
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+        const novoJogo = { nome, descricao, imagem, usuario: usuarioLogado.nome, comentarios: [], reacoes: { '😀': 0, '❤️': 0, '👍': 0, '👎': 0 } };
         await fetch('http://localhost:3001/jogos', {
             method: 'POST',
             headers: {

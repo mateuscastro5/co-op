@@ -5,13 +5,28 @@
       "nome": "Edecio's adventures",
       "descricao": "Um jogo de aventura bemmm legal. Vamos engajar, pessoal!",
       "imagem": "https://media.s-bol.com/pkGNp3n20BMp/3Q2Km89/550x766.jpg",
-      "interacoes": [
-        {
-          "texto": "",
-          "emoji": "❤️",
-          "usuario": "edecio"
-        }
-      ]
+      "usuario": "edecio",
+      "comentarios": [],
+      "reacoes": {
+        "😀": 0,
+        "❤️": 0,
+        "👍": 0,
+        "👎": 0
+      }
+    },
+    {
+      "id": "071a",
+      "nome": "Anel Ring",
+      "descricao": "Jogo RPG totalmente original",
+      "imagem": "https://gameluster.com/wp-content/uploads/2021/06/ELDENRING_01_4K-scaled.jpg",
+      "usuario": "edecio",
+      "comentarios": [],
+      "reacoes": {
+        "😀": 0,
+        "❤️": 1,
+        "👍": 0,
+        "👎": 0
+      }
     }
   ],
   "usuarios": [
