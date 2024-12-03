@@ -16,7 +16,7 @@ export function Navegacao () {
                     <Link to="">
                         <img src="./explore_selected.png" alt="explorar" className="" />
                     </Link>
-                    <Link to="">
+                    <Link to="/pesquisa">
                         <p className="hidden md:flex text-white text-2xl font-normal font-Jost">Explorar</p>
                     </Link>
                 </div>

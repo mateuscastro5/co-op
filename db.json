@@ -1,0 +1,17 @@
+{
+  "jogos": [
+    {
+      "id": "ae78",
+      "nome": "Edecio's adventures",
+      "descricao": "Um jogo de aventura bemmm legal. Vamos engajar, pessoal!",
+      "imagem": "https://media.s-bol.com/pkGNp3n20BMp/3Q2Km89/550x766.jpg",
+      "interacoes": [
+        {
+          "texto": "Super legal!"
+        }
+      ]
+    }
+  ],
+  
+  "usuarios": []
+}
